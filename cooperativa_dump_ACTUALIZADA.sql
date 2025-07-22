@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-07-2025 a las 20:48:37
+-- Tiempo de generación: 22-07-2025 a las 21:05:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,6 +29,7 @@ USE `cooperativa`;
 -- Estructura de tabla para la tabla `administrador`
 --
 
+DROP TABLE IF EXISTS `administrador`;
 CREATE TABLE `administrador` (
   `ci_usuario` varchar(20) NOT NULL,
   `nombre` varchar(50) DEFAULT NULL,
@@ -44,6 +45,7 @@ CREATE TABLE `administrador` (
 -- Estructura de tabla para la tabla `horas_incumplidas`
 --
 
+DROP TABLE IF EXISTS `horas_incumplidas`;
 CREATE TABLE `horas_incumplidas` (
   `id` int(11) NOT NULL,
   `id_jornada` int(11) DEFAULT NULL,
@@ -57,6 +59,7 @@ CREATE TABLE `horas_incumplidas` (
 -- Estructura de tabla para la tabla `id_jornada`
 --
 
+DROP TABLE IF EXISTS `id_jornada`;
 CREATE TABLE `id_jornada` (
   `id` int(11) NOT NULL,
   `ci_usuario` varchar(20) DEFAULT NULL,
@@ -70,6 +73,7 @@ CREATE TABLE `id_jornada` (
 -- Estructura de tabla para la tabla `integrante_familia`
 --
 
+DROP TABLE IF EXISTS `integrante_familia`;
 CREATE TABLE `integrante_familia` (
   `id` int(11) NOT NULL,
   `id_vivienda` int(11) DEFAULT NULL,
@@ -84,6 +88,7 @@ CREATE TABLE `integrante_familia` (
 -- Estructura de tabla para la tabla `pagos`
 --
 
+DROP TABLE IF EXISTS `pagos`;
 CREATE TABLE `pagos` (
   `id_pago` int(11) NOT NULL,
   `ci_usuario` varchar(20) DEFAULT NULL,
@@ -98,6 +103,7 @@ CREATE TABLE `pagos` (
 -- Estructura de tabla para la tabla `reportes`
 --
 
+DROP TABLE IF EXISTS `reportes`;
 CREATE TABLE `reportes` (
   `id` int(11) NOT NULL,
   `contenido` text DEFAULT NULL
@@ -109,6 +115,7 @@ CREATE TABLE `reportes` (
 -- Estructura de tabla para la tabla `socio`
 --
 
+DROP TABLE IF EXISTS `socio`;
 CREATE TABLE `socio` (
   `ci_usuario` varchar(20) NOT NULL,
   `nombre` varchar(50) DEFAULT NULL,
@@ -124,6 +131,7 @@ CREATE TABLE `socio` (
 -- Estructura de tabla para la tabla `solicitudes_ingreso`
 --
 
+DROP TABLE IF EXISTS `solicitudes_ingreso`;
 CREATE TABLE `solicitudes_ingreso` (
   `id` int(11) NOT NULL,
   `nombre_completo` varchar(100) DEFAULT NULL,
@@ -150,6 +158,7 @@ CREATE TABLE `solicitudes_ingreso` (
 -- Estructura de tabla para la tabla `tipo_pago`
 --
 
+DROP TABLE IF EXISTS `tipo_pago`;
 CREATE TABLE `tipo_pago` (
   `id` int(11) NOT NULL,
   `id_pago` int(11) DEFAULT NULL,
@@ -162,6 +171,7 @@ CREATE TABLE `tipo_pago` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `ci` varchar(20) NOT NULL,
   `contrasena` varchar(255) NOT NULL
@@ -173,6 +183,7 @@ CREATE TABLE `usuarios` (
 -- Estructura de tabla para la tabla `vivienda`
 --
 
+DROP TABLE IF EXISTS `vivienda`;
 CREATE TABLE `vivienda` (
   `id` int(11) NOT NULL,
   `habitaciones` int(11) DEFAULT NULL,
